@@ -1,0 +1,34 @@
+<app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos>
+<app-filtro-atendimento (eventoFiltro)="filtro()"></app-filtro-atendimento>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Paciente</th>
+            <th>Profissional</th>
+            <th>Unidade</th>
+            <th>Convênio</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of registros">
+            <td>{{r.data | date:'dd/MM/yyyy'}}</td>
+            <td>{{r.hora | slice:0:5}}</td>
+            <td>{{r.paciente.nome}}</td>
+            <td>{{r.profissional.nome}}</td>
+            <td>{{r.profissional.unidade.nome}}</td>
+            <td>{{r.convenio?.nome}}</td>
+            <td>
+                <a (click)="updateStatus(r.id)" class="botao chegada" [ngClass]="{'oculto': r.status == 'AGENDADO'}">Chegada</a>
+                <a (click)="updateStatus(r.id)" class="botao confirmacao" [ngClass]="{'oculto': r.status == 'CONFIRMADO'}">Confirmação</a>
+                <a routerLink="/agenda/form" [queryParams]="{id: r.id}" class="botao">Editar</a>
+                <a (click)="delete(r.id)" class="botao cancelar">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td colspan="7">Total de registros: {{registros?.length}}</td>
+    </tfoot>
+</table>

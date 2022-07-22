@@ -1,0 +1,10 @@
+<div id="filtro">
+    <div>
+        <span>Profissional:</span>
+        <select [(ngModel)]="profissional" [compareWith]="compareById" id="profissional" (ngModelChange)="filtro()">
+            <option [ngValue]="null">Todos os profissionais</option>
+            <option *ngFor="let item of profissionais" [ngValue]="item">{{item.nome}}</option>
+        </select>
+    </div>
+</div>
+
