@@ -1,0 +1,406 @@
+@relation 'atendimento_olap-weka.filters.unsupervised.attribute.Remove-R1-2,7-8,12,14-15-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,12,13,14,15,11-weka.filters.unsupervised.attribute.Remove-R1-3,9,11-12-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P66.0'
+
+@attribute atendimento_hora {15:30:00,14:00:00,17:30:00,19:30:00,19:00:00,16:00:00,18:00:00,16:30:00,17:00:00,20:00:00,18:30:00,14:30:00,15:00:00}
+@attribute profissional_especialidade {Pediatria,Infectologia,Urologia,Dermatologia,Cardiologia,Geriatria,Psiquiatria}
+@attribute unidade_nome {'Bela Vista',Bosque,'Cruzeiro do Sul'}
+@attribute convenio_nome {Unimed,Amil,'Sem convênio',Bradesco}
+@attribute paciente_sexo {M,F}
+@attribute paciente_faixa_etaria {Idoso,Jovem,Adulto}
+@attribute paciente_novo {false,true}
+@attribute paciente_tem_ausencia {true,false}
+@attribute paciente_ausente {true,false}
+
+@data
+20:00:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,false,false,false
+18:00:00,Pediatria,'Cruzeiro do Sul',Unimed,M,Idoso,false,false,true
+15:00:00,Dermatologia,'Cruzeiro do Sul',Bradesco,M,Idoso,true,false,false
+17:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Idoso,false,true,false
+16:00:00,Geriatria,'Cruzeiro do Sul',Amil,M,Adulto,false,true,true
+15:00:00,Urologia,Bosque,Bradesco,M,Idoso,false,false,false
+18:00:00,Psiquiatria,Bosque,Unimed,M,Adulto,false,true,false
+17:00:00,Dermatologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,true
+14:30:00,Dermatologia,'Cruzeiro do Sul',Unimed,F,Idoso,true,false,false
+20:00:00,Urologia,Bosque,Amil,M,Idoso,true,false,false
+19:30:00,Pediatria,'Bela Vista',Amil,F,Adulto,false,true,false
+14:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Jovem,false,false,false
+18:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Jovem,false,true,false
+15:30:00,Urologia,Bosque,Amil,M,Adulto,false,true,false
+18:00:00,Dermatologia,'Bela Vista',Amil,M,Idoso,false,false,true
+14:00:00,Psiquiatria,Bosque,Bradesco,M,Adulto,false,true,true
+18:00:00,Geriatria,'Cruzeiro do Sul',Amil,F,Adulto,false,true,false
+14:00:00,Psiquiatria,Bosque,Unimed,F,Adulto,true,false,true
+16:00:00,Urologia,Bosque,'Sem convênio',F,Idoso,false,false,true
+14:00:00,Cardiologia,'Bela Vista',Unimed,M,Idoso,false,true,false
+17:00:00,Psiquiatria,Bosque,'Sem convênio',F,Jovem,false,false,false
+18:00:00,Urologia,Bosque,Bradesco,F,Adulto,false,true,false
+18:30:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Idoso,false,false,false
+14:00:00,Pediatria,'Bela Vista',Amil,M,Adulto,false,false,false
+19:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',M,Adulto,false,false,false
+16:00:00,Pediatria,'Bela Vista',Bradesco,M,Jovem,false,true,false
+15:00:00,Geriatria,'Bela Vista',Amil,M,Jovem,false,false,false
+19:30:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,true,false
+14:00:00,Urologia,Bosque,Unimed,F,Adulto,false,false,true
+16:00:00,Urologia,Bosque,Unimed,F,Idoso,false,true,false
+15:00:00,Urologia,Bosque,Bradesco,F,Adulto,false,true,false
+14:30:00,Pediatria,'Bela Vista',Amil,M,Jovem,false,false,false
+14:00:00,Dermatologia,'Bela Vista','Sem convênio',F,Adulto,false,true,true
+14:00:00,Psiquiatria,Bosque,Bradesco,F,Adulto,false,true,false
+16:00:00,Pediatria,'Bela Vista',Unimed,M,Jovem,true,false,true
+15:00:00,Cardiologia,'Bela Vista','Sem convênio',F,Adulto,false,true,false
+18:00:00,Urologia,Bosque,Bradesco,F,Adulto,false,false,true
+16:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,false,true
+17:00:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,true,false,false
+15:00:00,Infectologia,Bosque,Bradesco,F,Jovem,false,true,false
+17:30:00,Pediatria,'Cruzeiro do Sul',Bradesco,M,Idoso,false,true,true
+20:00:00,Cardiologia,'Bela Vista',Unimed,M,Idoso,true,false,true
+17:30:00,Cardiologia,'Bela Vista',Amil,M,Adulto,false,false,false
+20:00:00,Cardiologia,'Bela Vista',Bradesco,F,Jovem,false,true,false
+19:00:00,Cardiologia,'Bela Vista',Amil,M,Adulto,true,false,true
+14:00:00,Infectologia,'Cruzeiro do Sul',Unimed,M,Idoso,false,false,false
+14:30:00,Infectologia,Bosque,Amil,M,Adulto,false,true,false
+16:30:00,Pediatria,'Cruzeiro do Sul',Unimed,F,Idoso,false,false,true
+16:00:00,Psiquiatria,Bosque,'Sem convênio',F,Jovem,false,true,true
+19:30:00,Urologia,Bosque,Amil,M,Jovem,true,false,false
+18:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Adulto,true,false,true
+19:00:00,Dermatologia,'Bela Vista',Bradesco,M,Idoso,true,false,false
+18:00:00,Urologia,'Cruzeiro do Sul',Bradesco,M,Jovem,false,true,false
+19:00:00,Dermatologia,Bosque,'Sem convênio',F,Adulto,false,false,true
+18:00:00,Urologia,Bosque,Amil,M,Idoso,false,false,true
+19:30:00,Urologia,Bosque,'Sem convênio',M,Adulto,true,false,false
+17:00:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,false,false,false
+20:00:00,Infectologia,'Cruzeiro do Sul',Unimed,M,Idoso,false,true,false
+19:00:00,Infectologia,'Cruzeiro do Sul',Unimed,M,Idoso,false,false,false
+14:00:00,Psiquiatria,Bosque,'Sem convênio',M,Adulto,false,false,false
+18:00:00,Geriatria,'Bela Vista',Unimed,M,Adulto,true,false,false
+17:00:00,Dermatologia,'Cruzeiro do Sul',Unimed,M,Idoso,false,false,false
+16:30:00,Infectologia,Bosque,Unimed,M,Jovem,false,false,false
+16:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,M,Idoso,true,false,false
+15:00:00,Dermatologia,Bosque,Amil,M,Adulto,false,true,false
+16:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,false
+19:00:00,Urologia,Bosque,'Sem convênio',F,Adulto,true,false,true
+14:30:00,Urologia,'Cruzeiro do Sul','Sem convênio',M,Idoso,true,false,false
+15:30:00,Infectologia,Bosque,Unimed,F,Adulto,false,true,false
+14:00:00,Geriatria,'Bela Vista',Unimed,M,Adulto,false,true,false
+16:30:00,Cardiologia,'Bela Vista',Amil,M,Jovem,false,false,false
+19:00:00,Dermatologia,'Bela Vista','Sem convênio',M,Idoso,true,false,true
+16:30:00,Dermatologia,'Bela Vista',Bradesco,M,Idoso,false,false,false
+15:30:00,Dermatologia,Bosque,Amil,M,Idoso,false,false,false
+17:00:00,Urologia,'Cruzeiro do Sul',Bradesco,F,Idoso,true,false,false
+14:00:00,Pediatria,'Bela Vista',Unimed,F,Idoso,false,false,true
+14:00:00,Infectologia,Bosque,Amil,F,Idoso,false,false,false
+16:30:00,Cardiologia,'Bela Vista',Amil,F,Idoso,false,true,false
+16:30:00,Cardiologia,'Bela Vista',Amil,M,Idoso,true,false,false
+15:00:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,false,true
+15:30:00,Psiquiatria,Bosque,Unimed,M,Idoso,false,false,true
+19:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,false,false
+19:30:00,Infectologia,Bosque,Amil,M,Idoso,false,true,false
+14:00:00,Cardiologia,'Bela Vista','Sem convênio',M,Adulto,false,false,true
+19:00:00,Pediatria,'Bela Vista','Sem convênio',M,Adulto,true,false,false
+18:00:00,Urologia,Bosque,Bradesco,M,Adulto,false,true,false
+16:30:00,Cardiologia,'Bela Vista','Sem convênio',M,Adulto,false,false,true
+19:00:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,false,true,false
+17:30:00,Geriatria,'Bela Vista',Amil,M,Adulto,false,true,true
+17:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Jovem,true,false,false
+19:30:00,Infectologia,Bosque,Unimed,M,Jovem,false,false,false
+15:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,true,false
+17:30:00,Psiquiatria,Bosque,Bradesco,M,Idoso,false,false,false
+14:30:00,Urologia,Bosque,Amil,M,Jovem,false,false,false
+16:30:00,Geriatria,'Bela Vista','Sem convênio',F,Jovem,false,false,false
+18:30:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Adulto,false,true,false
+19:30:00,Cardiologia,'Bela Vista',Unimed,M,Adulto,false,false,false
+15:30:00,Dermatologia,Bosque,'Sem convênio',M,Jovem,false,false,false
+14:30:00,Psiquiatria,Bosque,Bradesco,F,Adulto,false,true,false
+16:00:00,Dermatologia,'Cruzeiro do Sul',Unimed,F,Idoso,true,false,false
+16:00:00,Infectologia,Bosque,Unimed,F,Adulto,false,true,false
+19:00:00,Cardiologia,'Bela Vista',Bradesco,F,Jovem,false,true,false
+20:00:00,Dermatologia,'Bela Vista','Sem convênio',F,Adulto,false,true,true
+16:00:00,Infectologia,Bosque,'Sem convênio',M,Adulto,false,true,true
+14:30:00,Cardiologia,'Bela Vista',Unimed,M,Adulto,false,false,false
+15:30:00,Pediatria,'Cruzeiro do Sul',Unimed,M,Adulto,false,false,false
+17:30:00,Infectologia,Bosque,'Sem convênio',M,Adulto,false,true,true
+16:30:00,Infectologia,Bosque,Bradesco,M,Jovem,false,true,true
+19:30:00,Dermatologia,Bosque,Unimed,M,Adulto,false,false,false
+19:00:00,Pediatria,'Bela Vista',Unimed,M,Adulto,false,false,false
+16:00:00,Cardiologia,'Bela Vista',Unimed,F,Adulto,true,false,true
+15:00:00,Cardiologia,'Bela Vista',Unimed,M,Jovem,false,true,true
+17:00:00,Pediatria,'Bela Vista',Bradesco,F,Jovem,false,true,false
+14:00:00,Geriatria,'Bela Vista',Unimed,F,Adulto,false,true,false
+19:00:00,Dermatologia,'Bela Vista','Sem convênio',M,Jovem,false,false,false
+15:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Adulto,true,false,false
+15:30:00,Cardiologia,'Bela Vista',Unimed,F,Idoso,false,true,true
+16:00:00,Cardiologia,'Bela Vista',Amil,F,Idoso,false,false,false
+16:30:00,Urologia,'Cruzeiro do Sul',Amil,M,Adulto,false,true,false
+19:30:00,Infectologia,'Cruzeiro do Sul',Amil,F,Jovem,false,true,false
+15:00:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Idoso,false,false,false
+18:00:00,Dermatologia,Bosque,Bradesco,M,Jovem,false,true,false
+20:00:00,Urologia,Bosque,'Sem convênio',F,Adulto,true,false,true
+18:30:00,Cardiologia,'Bela Vista',Amil,F,Adulto,false,true,false
+14:30:00,Dermatologia,'Bela Vista',Unimed,F,Adulto,true,false,false
+19:00:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,true,false
+19:00:00,Urologia,Bosque,'Sem convênio',F,Adulto,false,true,false
+18:00:00,Dermatologia,'Bela Vista','Sem convênio',F,Adulto,false,true,false
+19:30:00,Geriatria,'Cruzeiro do Sul','Sem convênio',M,Adulto,true,false,false
+16:00:00,Cardiologia,'Bela Vista',Amil,M,Jovem,false,true,false
+15:00:00,Cardiologia,'Bela Vista','Sem convênio',F,Idoso,false,true,false
+17:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Jovem,false,true,false
+16:30:00,Pediatria,'Bela Vista',Bradesco,M,Adulto,true,false,true
+19:00:00,Urologia,Bosque,Unimed,M,Jovem,false,true,false
+16:00:00,Urologia,'Cruzeiro do Sul',Unimed,F,Adulto,false,false,false
+14:30:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Jovem,true,false,true
+14:00:00,Cardiologia,'Bela Vista',Amil,F,Adulto,false,false,false
+15:30:00,Dermatologia,Bosque,Bradesco,F,Jovem,false,false,false
+18:30:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,false,false,true
+14:30:00,Pediatria,'Bela Vista',Bradesco,M,Jovem,true,false,true
+14:00:00,Geriatria,'Bela Vista',Unimed,F,Jovem,true,false,true
+20:00:00,Infectologia,'Cruzeiro do Sul',Unimed,F,Adulto,false,false,false
+15:00:00,Geriatria,'Cruzeiro do Sul',Amil,F,Adulto,false,false,false
+17:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,false,false
+15:30:00,Cardiologia,'Bela Vista',Bradesco,M,Adulto,false,false,false
+19:30:00,Dermatologia,'Cruzeiro do Sul',Unimed,F,Adulto,false,false,false
+17:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,false,false
+18:30:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,false,false,false
+14:00:00,Pediatria,'Bela Vista',Unimed,M,Adulto,false,true,false
+16:30:00,Cardiologia,'Bela Vista',Amil,M,Idoso,false,false,false
+20:00:00,Urologia,Bosque,Bradesco,F,Jovem,false,true,true
+15:00:00,Cardiologia,'Bela Vista',Unimed,M,Idoso,false,false,false
+17:30:00,Geriatria,'Bela Vista','Sem convênio',M,Idoso,false,false,true
+18:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,true,false
+14:30:00,Psiquiatria,Bosque,Amil,M,Adulto,false,false,false
+20:00:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Adulto,false,false,true
+17:00:00,Infectologia,Bosque,'Sem convênio',F,Idoso,true,false,false
+18:00:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Adulto,false,true,true
+19:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,false,false
+15:30:00,Infectologia,'Cruzeiro do Sul',Amil,M,Adulto,true,false,false
+16:00:00,Psiquiatria,Bosque,Bradesco,M,Jovem,false,true,true
+14:00:00,Infectologia,Bosque,Amil,F,Jovem,false,true,true
+16:00:00,Urologia,Bosque,'Sem convênio',F,Jovem,false,false,false
+17:00:00,Dermatologia,Bosque,Amil,M,Adulto,true,false,true
+15:00:00,Urologia,Bosque,Amil,F,Adulto,false,true,true
+16:00:00,Infectologia,Bosque,Unimed,F,Idoso,false,true,false
+18:00:00,Pediatria,'Bela Vista','Sem convênio',F,Idoso,true,false,false
+18:30:00,Pediatria,'Cruzeiro do Sul',Bradesco,F,Adulto,false,true,false
+16:30:00,Cardiologia,'Bela Vista',Bradesco,M,Adulto,false,true,false
+19:30:00,Infectologia,Bosque,Amil,M,Adulto,true,false,false
+15:30:00,Dermatologia,Bosque,Amil,F,Adulto,false,true,false
+20:00:00,Pediatria,'Cruzeiro do Sul',Amil,F,Jovem,false,false,false
+18:30:00,Urologia,Bosque,Amil,M,Jovem,false,false,true
+15:30:00,Dermatologia,Bosque,Amil,F,Idoso,false,false,true
+18:00:00,Infectologia,Bosque,'Sem convênio',F,Idoso,false,false,false
+18:00:00,Infectologia,Bosque,Amil,M,Adulto,false,false,false
+14:00:00,Cardiologia,'Bela Vista',Amil,F,Idoso,false,false,false
+18:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,M,Jovem,false,true,false
+20:00:00,Urologia,Bosque,Amil,M,Adulto,true,false,false
+19:30:00,Psiquiatria,Bosque,Bradesco,F,Idoso,true,false,false
+15:00:00,Geriatria,'Cruzeiro do Sul',Unimed,M,Idoso,false,true,true
+15:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,M,Idoso,false,false,true
+14:00:00,Dermatologia,'Cruzeiro do Sul',Unimed,F,Adulto,false,false,false
+19:00:00,Psiquiatria,Bosque,'Sem convênio',F,Adulto,false,false,true
+18:30:00,Dermatologia,Bosque,Bradesco,M,Adulto,false,false,false
+19:00:00,Pediatria,'Bela Vista',Amil,F,Idoso,false,false,false
+17:00:00,Geriatria,'Bela Vista',Amil,F,Idoso,false,true,false
+20:00:00,Geriatria,'Cruzeiro do Sul',Unimed,M,Adulto,true,false,false
+15:00:00,Dermatologia,'Cruzeiro do Sul',Bradesco,M,Adulto,false,true,false
+18:30:00,Dermatologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,false
+17:00:00,Psiquiatria,Bosque,Unimed,F,Idoso,false,true,false
+20:00:00,Geriatria,'Bela Vista',Bradesco,F,Idoso,true,false,false
+19:30:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,false,true,false
+15:30:00,Geriatria,'Bela Vista','Sem convênio',M,Jovem,false,false,true
+19:00:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,true,false,true
+19:00:00,Dermatologia,'Cruzeiro do Sul',Unimed,F,Idoso,false,false,false
+18:30:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Jovem,false,true,false
+19:00:00,Geriatria,'Bela Vista','Sem convênio',M,Idoso,true,false,false
+16:00:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Idoso,false,true,true
+19:30:00,Infectologia,Bosque,'Sem convênio',F,Jovem,false,true,false
+15:30:00,Infectologia,Bosque,'Sem convênio',M,Idoso,false,false,false
+17:30:00,Pediatria,'Cruzeiro do Sul',Bradesco,F,Jovem,false,false,false
+16:30:00,Infectologia,Bosque,Amil,M,Idoso,false,false,false
+18:00:00,Cardiologia,'Bela Vista','Sem convênio',F,Adulto,false,true,true
+20:00:00,Urologia,Bosque,Amil,F,Adulto,false,true,true
+19:00:00,Geriatria,'Cruzeiro do Sul',Amil,F,Idoso,false,false,true
+19:00:00,Cardiologia,'Bela Vista',Unimed,F,Adulto,true,false,false
+19:00:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Adulto,true,false,false
+15:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Adulto,false,false,false
+18:00:00,Dermatologia,'Bela Vista','Sem convênio',M,Idoso,false,false,false
+16:00:00,Urologia,Bosque,Amil,F,Adulto,false,false,true
+18:30:00,Infectologia,Bosque,Bradesco,M,Adulto,true,false,false
+19:30:00,Infectologia,Bosque,Amil,F,Adulto,false,true,true
+20:00:00,Dermatologia,Bosque,Amil,M,Adulto,true,false,false
+14:00:00,Urologia,Bosque,'Sem convênio',F,Idoso,false,false,false
+15:30:00,Urologia,Bosque,Amil,M,Adulto,false,false,false
+18:00:00,Dermatologia,Bosque,Bradesco,M,Idoso,false,true,true
+19:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,M,Adulto,false,false,false
+17:00:00,Dermatologia,Bosque,'Sem convênio',M,Adulto,false,false,false
+14:30:00,Geriatria,'Cruzeiro do Sul',Amil,M,Adulto,true,false,false
+17:30:00,Urologia,'Cruzeiro do Sul','Sem convênio',F,Jovem,false,true,false
+17:00:00,Infectologia,'Cruzeiro do Sul',Unimed,F,Jovem,false,false,true
+15:00:00,Infectologia,Bosque,Unimed,M,Adulto,false,true,false
+15:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Adulto,true,false,false
+14:30:00,Geriatria,'Bela Vista','Sem convênio',M,Idoso,false,true,false
+19:30:00,Pediatria,'Cruzeiro do Sul',Bradesco,M,Jovem,true,false,false
+18:30:00,Geriatria,'Bela Vista',Unimed,F,Jovem,false,true,true
+14:30:00,Dermatologia,'Cruzeiro do Sul',Unimed,M,Idoso,false,false,false
+16:30:00,Infectologia,Bosque,Unimed,F,Idoso,false,false,false
+20:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Jovem,false,true,false
+18:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Idoso,false,true,true
+20:00:00,Infectologia,Bosque,Bradesco,F,Idoso,false,false,true
+17:30:00,Dermatologia,'Bela Vista','Sem convênio',M,Jovem,false,false,true
+14:30:00,Pediatria,'Bela Vista',Unimed,F,Jovem,false,true,true
+16:30:00,Geriatria,'Bela Vista','Sem convênio',F,Jovem,true,false,false
+19:00:00,Dermatologia,Bosque,Amil,M,Idoso,false,false,true
+18:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Jovem,false,true,false
+17:30:00,Pediatria,'Bela Vista','Sem convênio',M,Idoso,false,true,true
+14:30:00,Dermatologia,Bosque,Unimed,F,Jovem,false,true,false
+18:30:00,Infectologia,Bosque,'Sem convênio',F,Adulto,true,false,false
+17:30:00,Geriatria,'Bela Vista',Unimed,M,Jovem,true,false,true
+19:00:00,Dermatologia,'Bela Vista',Bradesco,M,Adulto,false,false,false
+18:00:00,Psiquiatria,Bosque,Amil,M,Adulto,false,true,true
+16:30:00,Psiquiatria,Bosque,'Sem convênio',F,Jovem,false,true,false
+14:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,true,false,false
+20:00:00,Psiquiatria,Bosque,Bradesco,F,Adulto,false,true,false
+18:00:00,Dermatologia,'Cruzeiro do Sul',Unimed,M,Idoso,true,false,false
+20:00:00,Cardiologia,'Bela Vista',Amil,M,Jovem,false,true,false
+14:30:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',F,Idoso,true,false,false
+14:00:00,Psiquiatria,Bosque,Amil,M,Idoso,true,false,false
+16:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Idoso,false,true,false
+15:30:00,Dermatologia,'Bela Vista',Unimed,F,Jovem,false,true,false
+19:30:00,Geriatria,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,true,true
+14:00:00,Cardiologia,'Bela Vista','Sem convênio',M,Idoso,false,false,false
+19:00:00,Dermatologia,Bosque,Bradesco,F,Jovem,false,false,false
+15:00:00,Dermatologia,'Bela Vista','Sem convênio',F,Idoso,false,true,true
+19:00:00,Pediatria,'Cruzeiro do Sul',Unimed,M,Adulto,true,false,false
+17:00:00,Pediatria,'Bela Vista',Amil,F,Adulto,false,true,false
+15:30:00,Infectologia,Bosque,Amil,F,Jovem,false,true,true
+18:00:00,Geriatria,'Cruzeiro do Sul',Unimed,M,Idoso,true,false,false
+14:30:00,Urologia,Bosque,Bradesco,F,Adulto,true,false,false
+20:00:00,Urologia,Bosque,Unimed,F,Adulto,false,false,false
+17:00:00,Dermatologia,'Bela Vista',Unimed,F,Idoso,false,false,false
+17:00:00,Geriatria,'Bela Vista',Bradesco,M,Adulto,false,false,false
+15:00:00,Pediatria,'Bela Vista',Unimed,M,Idoso,true,false,false
+19:30:00,Urologia,Bosque,Unimed,F,Idoso,false,false,false
+18:00:00,Cardiologia,'Bela Vista','Sem convênio',F,Idoso,false,false,false
+17:00:00,Psiquiatria,Bosque,Bradesco,F,Adulto,false,true,false
+14:00:00,Geriatria,'Bela Vista',Amil,F,Adulto,false,false,false
+18:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,false,true
+14:30:00,Pediatria,'Bela Vista',Bradesco,F,Jovem,false,false,true
+16:30:00,Geriatria,'Cruzeiro do Sul',Bradesco,M,Idoso,false,false,false
+15:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,true,false
+16:30:00,Cardiologia,'Bela Vista','Sem convênio',M,Adulto,false,false,true
+15:00:00,Dermatologia,Bosque,Amil,F,Idoso,false,false,false
+20:00:00,Urologia,'Cruzeiro do Sul',Bradesco,M,Idoso,false,false,false
+20:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,true,false
+15:30:00,Dermatologia,Bosque,Unimed,M,Idoso,false,false,false
+16:30:00,Pediatria,'Bela Vista','Sem convênio',F,Jovem,false,false,true
+14:00:00,Urologia,'Cruzeiro do Sul',Unimed,M,Adulto,false,true,true
+15:00:00,Infectologia,Bosque,Amil,F,Jovem,true,false,false
+14:30:00,Geriatria,'Cruzeiro do Sul',Bradesco,M,Adulto,false,false,true
+16:00:00,Geriatria,'Bela Vista',Bradesco,M,Idoso,false,true,false
+17:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,false
+19:30:00,Urologia,Bosque,Bradesco,F,Adulto,false,true,false
+16:30:00,Dermatologia,'Bela Vista',Unimed,F,Idoso,false,true,false
+17:30:00,Pediatria,'Bela Vista',Unimed,F,Adulto,false,true,false
+17:30:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Adulto,false,true,false
+19:00:00,Pediatria,'Bela Vista',Amil,F,Idoso,false,false,false
+15:00:00,Geriatria,'Bela Vista',Amil,M,Jovem,false,false,false
+16:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Jovem,false,false,false
+17:30:00,Infectologia,Bosque,Amil,F,Jovem,false,true,false
+17:00:00,Urologia,'Cruzeiro do Sul','Sem convênio',M,Idoso,false,false,false
+17:30:00,Psiquiatria,Bosque,'Sem convênio',F,Idoso,true,false,false
+19:00:00,Pediatria,'Cruzeiro do Sul',Unimed,M,Adulto,true,false,false
+15:30:00,Cardiologia,'Bela Vista',Amil,M,Adulto,false,true,true
+14:00:00,Dermatologia,'Bela Vista',Bradesco,M,Adulto,false,true,true
+18:00:00,Pediatria,'Bela Vista',Amil,M,Adulto,true,false,true
+17:30:00,Urologia,Bosque,Bradesco,F,Jovem,true,false,false
+15:00:00,Infectologia,Bosque,'Sem convênio',F,Jovem,false,true,false
+15:30:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,true,false
+18:30:00,Dermatologia,Bosque,Unimed,F,Jovem,false,false,true
+19:00:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Jovem,false,false,false
+19:00:00,Infectologia,Bosque,Bradesco,F,Adulto,true,false,false
+16:30:00,Pediatria,'Bela Vista','Sem convênio',M,Adulto,true,false,false
+16:00:00,Cardiologia,'Bela Vista','Sem convênio',M,Adulto,false,false,false
+15:30:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,false,false,true
+20:00:00,Cardiologia,'Bela Vista',Amil,M,Idoso,false,false,false
+15:30:00,Psiquiatria,Bosque,Amil,M,Idoso,false,true,false
+15:00:00,Geriatria,'Bela Vista','Sem convênio',F,Adulto,false,false,false
+15:30:00,Infectologia,Bosque,Unimed,M,Idoso,false,true,false
+17:30:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,true,false
+20:00:00,Pediatria,'Bela Vista',Unimed,F,Adulto,false,true,true
+16:00:00,Infectologia,Bosque,Amil,F,Jovem,false,true,false
+15:00:00,Cardiologia,'Bela Vista',Unimed,F,Idoso,false,true,false
+17:30:00,Cardiologia,'Bela Vista','Sem convênio',M,Adulto,true,false,true
+17:30:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Jovem,false,true,true
+18:30:00,Dermatologia,'Bela Vista',Amil,M,Adulto,false,false,true
+17:30:00,Urologia,Bosque,Unimed,M,Adulto,false,true,true
+16:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Jovem,false,true,true
+19:30:00,Cardiologia,'Bela Vista',Amil,M,Adulto,false,false,true
+15:00:00,Urologia,Bosque,Unimed,M,Jovem,false,false,true
+19:00:00,Infectologia,'Cruzeiro do Sul',Amil,F,Adulto,false,true,false
+17:00:00,Cardiologia,'Bela Vista',Unimed,M,Adulto,true,false,false
+14:30:00,Urologia,Bosque,Bradesco,F,Idoso,false,true,false
+16:00:00,Cardiologia,'Bela Vista',Unimed,M,Idoso,false,true,false
+16:30:00,Urologia,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,false,false
+16:00:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Jovem,true,false,false
+16:30:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Jovem,true,false,true
+18:30:00,Cardiologia,'Bela Vista',Bradesco,F,Adulto,false,false,false
+20:00:00,Dermatologia,'Cruzeiro do Sul','Sem convênio',M,Jovem,true,false,true
+15:30:00,Urologia,Bosque,'Sem convênio',F,Idoso,false,true,false
+16:30:00,Psiquiatria,Bosque,Unimed,M,Idoso,true,false,false
+14:00:00,Dermatologia,'Cruzeiro do Sul',Amil,F,Adulto,true,false,false
+17:30:00,Psiquiatria,Bosque,Amil,F,Jovem,false,true,false
+15:30:00,Dermatologia,'Cruzeiro do Sul',Unimed,M,Adulto,false,true,true
+16:00:00,Infectologia,Bosque,Amil,F,Adulto,true,false,true
+18:00:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Jovem,false,true,false
+16:00:00,Cardiologia,'Bela Vista','Sem convênio',M,Jovem,false,true,true
+15:30:00,Urologia,Bosque,Unimed,F,Idoso,false,false,true
+14:00:00,Geriatria,'Cruzeiro do Sul',Unimed,F,Jovem,false,false,true
+14:30:00,Dermatologia,Bosque,Amil,M,Adulto,true,false,false
+16:00:00,Urologia,Bosque,'Sem convênio',M,Idoso,true,false,false
+15:00:00,Cardiologia,'Bela Vista',Amil,F,Idoso,true,false,false
+14:00:00,Pediatria,'Bela Vista',Unimed,F,Adulto,false,true,false
+15:00:00,Psiquiatria,Bosque,Bradesco,M,Jovem,true,false,true
+19:30:00,Infectologia,Bosque,Amil,F,Idoso,false,true,true
+14:30:00,Geriatria,'Cruzeiro do Sul',Unimed,F,Adulto,false,false,false
+14:30:00,Dermatologia,Bosque,Amil,M,Jovem,true,false,false
+19:30:00,Infectologia,'Cruzeiro do Sul',Amil,F,Adulto,true,false,false
+17:30:00,Urologia,'Cruzeiro do Sul',Amil,F,Idoso,false,true,false
+19:00:00,Infectologia,'Cruzeiro do Sul','Sem convênio',M,Adulto,true,false,false
+15:30:00,Dermatologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,true,false
+16:30:00,Cardiologia,'Bela Vista','Sem convênio',M,Idoso,false,true,false
+18:30:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Adulto,true,false,true
+16:30:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Idoso,false,false,false
+19:00:00,Infectologia,Bosque,Amil,M,Jovem,false,true,true
+15:30:00,Infectologia,'Cruzeiro do Sul',Bradesco,M,Jovem,true,false,false
+16:00:00,Cardiologia,'Bela Vista',Unimed,M,Adulto,false,false,true
+20:00:00,Pediatria,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,false,false
+16:30:00,Urologia,Bosque,Unimed,F,Adulto,false,true,true
+19:00:00,Urologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,false
+19:00:00,Psiquiatria,Bosque,Amil,M,Jovem,false,true,false
+15:30:00,Pediatria,'Bela Vista',Unimed,M,Idoso,false,true,true
+16:30:00,Dermatologia,'Bela Vista','Sem convênio',M,Adulto,false,false,false
+16:30:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Adulto,false,true,true
+19:00:00,Infectologia,Bosque,'Sem convênio',F,Idoso,false,true,true
+17:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,false
+18:30:00,Geriatria,'Bela Vista','Sem convênio',F,Adulto,false,true,false
+15:30:00,Geriatria,'Bela Vista',Bradesco,F,Adulto,false,false,true
+19:30:00,Dermatologia,'Bela Vista',Unimed,M,Idoso,false,false,true
+16:00:00,Cardiologia,'Bela Vista',Unimed,M,Adulto,false,false,true
+14:30:00,Dermatologia,'Bela Vista','Sem convênio',M,Adulto,false,true,false
+14:00:00,Geriatria,'Cruzeiro do Sul',Bradesco,F,Idoso,false,true,false
+16:00:00,Dermatologia,Bosque,Bradesco,F,Adulto,false,false,false
+16:30:00,Dermatologia,Bosque,'Sem convênio',M,Adulto,false,false,true
+16:00:00,Infectologia,'Cruzeiro do Sul',Unimed,M,Jovem,false,true,false
+17:30:00,Dermatologia,'Cruzeiro do Sul',Amil,M,Adulto,true,false,false
+16:30:00,Psiquiatria,Bosque,Amil,M,Adulto,false,false,false
+19:30:00,Urologia,'Cruzeiro do Sul',Bradesco,F,Idoso,true,false,true
+20:00:00,Infectologia,'Cruzeiro do Sul',Bradesco,F,Adulto,false,false,true
+18:00:00,Dermatologia,Bosque,'Sem convênio',M,Idoso,false,true,false
+19:30:00,Geriatria,'Cruzeiro do Sul','Sem convênio',F,Idoso,false,true,true
+20:00:00,Cardiologia,'Bela Vista','Sem convênio',F,Adulto,true,false,false
+14:00:00,Dermatologia,Bosque,Amil,M,Adulto,false,true,false
+19:30:00,Infectologia,Bosque,'Sem convênio',F,Jovem,false,true,false
+14:30:00,Geriatria,'Bela Vista','Sem convênio',M,Adulto,false,false,false
+15:30:00,Geriatria,'Cruzeiro do Sul',Amil,F,Adulto,false,false,false
+15:00:00,Dermatologia,Bosque,Bradesco,F,Idoso,false,false,false
+18:30:00,Infectologia,Bosque,'Sem convênio',M,Adulto,true,false,false
+17:30:00,Infectologia,'Cruzeiro do Sul','Sem convênio',F,Adulto,false,true,true
+17:00:00,Dermatologia,Bosque,Bradesco,F,Idoso,false,true,false
+16:30:00,Urologia,Bosque,'Sem convênio',F,Idoso,false,true,true

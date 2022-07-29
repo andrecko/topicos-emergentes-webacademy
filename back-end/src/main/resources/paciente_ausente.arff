@@ -1,0 +1,13 @@
+@relation 'atendimento_olap-weka.filters.unsupervised.attribute.Remove-R1-2,7-8,12,14-15-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,8,9,10,12,13,14,15,11-weka.filters.unsupervised.attribute.Remove-R1-3,9,11-12-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.unsupervised.instance.RemovePercentage-P66.0-V-weka.filters.supervised.instance.Resample-B1.0-S1-Z140.0-weka.filters.unsupervised.instance.RemovePercentage-P100.0'
+
+@attribute atendimento_hora {15:30:00,14:00:00,17:30:00,19:30:00,19:00:00,16:00:00,18:00:00,16:30:00,17:00:00,20:00:00,18:30:00,14:30:00,15:00:00}
+@attribute profissional_especialidade {Pediatria,Infectologia,Urologia,Dermatologia,Cardiologia,Geriatria,Psiquiatria}
+@attribute unidade_nome {'Bela Vista',Bosque,'Cruzeiro do Sul'}
+@attribute convenio_nome {Unimed,Amil,'Sem convênio',Bradesco}
+@attribute paciente_sexo {M,F}
+@attribute paciente_faixa_etaria {Idoso,Jovem,Adulto}
+@attribute paciente_novo {false,true}
+@attribute paciente_tem_ausencia {true,false}
+@attribute paciente_ausente {true,false}
+
+@data
