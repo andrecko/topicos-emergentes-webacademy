@@ -47,6 +47,16 @@ public class Atendimento implements Serializable {
     @Enumerated(EnumType.STRING)
     private EStatusAtendimento status = EStatusAtendimento.AGENDADO;
 
+    private Boolean indicadorAusencia;
+
+    public Boolean getIndicadorAusencia() {
+        return indicadorAusencia;
+    }
+
+    public void setIndicadorAusencia(Boolean indicadorAusencia) {
+        this.indicadorAusencia = indicadorAusencia;
+    }
+
     public Long getId() {
         return id;
     }

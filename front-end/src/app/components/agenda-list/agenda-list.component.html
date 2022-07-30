@@ -9,6 +9,7 @@
             <th>Profissional</th>
             <th>Unidade</th>
             <th>Convênio</th>
+            <th>Indicador de ausência</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -20,6 +21,7 @@
             <td>{{r.profissional.nome}}</td>
             <td>{{r.profissional.unidade.nome}}</td>
             <td>{{r.convenio?.nome}}</td>
+            <td><span *ngIf="r.indicadorAusencia != null">{{r.indicadorAusencia ? "Sim" : "Não"}}</span></td>
             <td>
                 <a (click)="updateStatus(r.id)" class="botao chegada" [ngClass]="{'oculto': r.status == 'AGENDADO'}">Chegada</a>
                 <a (click)="updateStatus(r.id)" class="botao confirmacao" [ngClass]="{'oculto': r.status == 'CONFIRMADO'}">Confirmação</a>
@@ -29,6 +31,6 @@
         </tr>
     </tbody>
     <tfoot>
-        <td colspan="7">Total de registros: {{registros?.length}}</td>
+        <td colspan="8">Total de registros: {{registros?.length}}</td>
     </tfoot>
 </table>

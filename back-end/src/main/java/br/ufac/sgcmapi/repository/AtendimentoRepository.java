@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import br.ufac.sgcmapi.model.Atendimento;
+import br.ufac.sgcmapi.model.EStatusAtendimento;
 import br.ufac.sgcmapi.model.Profissional;
 
 public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> {
@@ -26,5 +27,7 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
     List<Atendimento> findByProfissionalAndData(Profissional profissional, Date data);
 
     List<Atendimento> findByProfissional(Profissional profissional);
+
+    List<Atendimento> findByStatusInAndDataGreaterThanEqual(List<EStatusAtendimento> status, Date date);
     
 }

@@ -10,4 +10,5 @@ export interface Atendimento {
     convenio: Convenio;
     paciente: Paciente;
     status: string;
+    indicadorAusencia: boolean;
 }
